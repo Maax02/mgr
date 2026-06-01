@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+ 
+canvas#bg {
+    position: absolute;
+    z-index: 0;
+}
+ 
+canvas#fg {
+    position: absolute;
+    z-index: 1;
+}

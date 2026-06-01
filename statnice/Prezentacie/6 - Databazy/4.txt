@@ -1,0 +1,28 @@
+r1 : sg(X, X) <- person(X).
+r2 : sg(X, Y) <- par(X, XP) , par(Y, YP) , sg(XP, YP)
+
+?- sg(j, Y)
+
+b = bound
+f = free
+
+sg()^bf = prve je bound (cize X), druhe (aj ostatne) je free
+
+r2.0[X | XP, Y, YP] = X free ostatne bound
+2.0 znamena druhe pravidlo nulty (index) predikat
+
+r2.1[X, XP | Y, YP] = nachadzame sa na sg(X, Y) <- par(X, XP), (tu sme) par(Y, P)
+preto uz je XP bound
+
+
+RECTIFICATION:
+
+/* p1(Y) <- p(Y, Y)*/
+
+r1 : p(X, Y) <- s(X, Y)
+r2 : p(X, Y) <- q(X, V), p1(Y)
+r3 : p1(y) <- s(Y, Y)
+r4 : p1(Y) <- s(Y, V) , p1(Y)
+
+RULE GOAL GRAPH v galerii
+?- p(X, Y)

@@ -1,0 +1,29 @@
+div.thumbs {
+    display: none;
+}
+ 
+.frame {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+ 
+img.imageBack, img.imageFront {
+    position: absolute;
+    max-width: 200px;
+    max-height: 150px;
+    border: 0;
+}
+ 
+img.imageBack {
+    z-index: 1;
+}
+ 
+img.imageFront {
+    z-index: 2;
+}
+ 
+button.start {
+    width: 200px;
+	padding: 5px;
+}
